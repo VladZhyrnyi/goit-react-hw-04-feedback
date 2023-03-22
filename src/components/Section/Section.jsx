@@ -1,9 +1,10 @@
 import React from "react";
+import { Title } from "./Section.styled";
 
 export const Section = ({title, children}) => {
   return (
     <section>
-      <h1>{title}</h1>
+      <Title>{title}</Title>
       {children}
     </section>
   )
