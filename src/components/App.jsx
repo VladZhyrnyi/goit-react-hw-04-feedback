@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container } from './Container/Container.styled';
 import { Section } from './Section/Section';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
+import { Notification } from './Notification/Notification';
 import { Statistics } from './Statistics/Statistics';
 
 export class App extends Component {
@@ -38,7 +39,7 @@ export class App extends Component {
             options={Object.keys(this.state)}
             onClick={this.handleOptionClick}
           />
-          {this.countTotalFeedback() !== 0 && (
+          {this.countTotalFeedback() === 0? (<Notification message="There is no feedback"></Notification>): (
             <Statistics
               good={good}
               neutral={neutral}
