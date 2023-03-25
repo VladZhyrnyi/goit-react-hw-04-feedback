@@ -12,9 +12,8 @@ export class App extends Component {
     bad: 0,
   };
 
-  handleOptionClick = event => {
-    const { value } = event.currentTarget;
-
+  handleOptionClick = value => {
+    
     this.setState(prevState => {
       return { [value]: (prevState[value] += 1) };
     });
